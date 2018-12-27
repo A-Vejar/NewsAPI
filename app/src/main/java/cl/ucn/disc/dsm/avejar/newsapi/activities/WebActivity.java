@@ -2,6 +2,7 @@ package cl.ucn.disc.dsm.avejar.newsapi.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -33,5 +34,14 @@ public class WebActivity extends AppCompatActivity {
         }else{
             webUrl.loadUrl("https://newsapi.org/docs/get-started");
         }
+    }
+
+    /**
+     * Back button
+     *
+     * @param  - Activity view
+     */
+    public void BackButton(View view){
+        finish();
     }
 }
