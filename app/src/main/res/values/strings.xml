@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name"> Science News App </string>
+    <string name="app_name_logo"> Latest News </string>
+
+    <string name="activity_main_button"> API Web Site --> </string>
+
+    <string name="row_news_source"> News Source </string>
+    <string name="row_news_author"> News Author </string>
+    <string name="row_news_title"> News Title </string>
+    <string name="row_news_description"> News Description </string>
+    <string name="row_news_publish"> News Publish Date </string>
+
+    <string name="bar_menu_web"> Web Site </string>
+    <string name="bar_menu_search"> Search ... </string>
+
+    <string name="acra_crash_text"> The App Stopped Unexpectedly </string>
+
+</resources>
