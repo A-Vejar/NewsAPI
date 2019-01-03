@@ -33,17 +33,4 @@ public interface NewsDao {
      */
     @Query("SELECT * FROM news_table ORDER BY publishedAt DESC")
     LiveData<List<News>> getAllNews();
-
-    /**
-     * Get the news size
-     *
-     * @return - Number of news
-     */
-    @Query("SELECT COUNT(*) FROM news_table")
-    int count();
-
-    // TODO: Get all URL
-    @Query("SELECT url FROM news_table ORDER BY publishedAt DESC")
-    LiveData<List<News>> getUrl();
-
 }

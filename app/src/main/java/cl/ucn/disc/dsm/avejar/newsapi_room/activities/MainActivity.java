@@ -1,4 +1,4 @@
-package cl.ucn.disc.dsm.avejar.newsapi_room;
+package cl.ucn.disc.dsm.avejar.newsapi_room.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -18,7 +18,8 @@ import android.widget.SearchView;
 import android.widget.Toast;
 import java.util.List;
 
-import cl.ucn.disc.dsm.avejar.newsapi_room.activities.WebActivity;
+import cl.ucn.disc.dsm.avejar.newsapi_room.NewsViewModel;
+import cl.ucn.disc.dsm.avejar.newsapi_room.R;
 import cl.ucn.disc.dsm.avejar.newsapi_room.controllers.NewsController;
 import cl.ucn.disc.dsm.avejar.newsapi_room.models.News;
 import cl.ucn.disc.dsm.avejar.newsapi_room.adapters.NewsAdapter;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Adapter
-        adapter = new NewsAdapter(this);
+        adapter = new NewsAdapter(this, myClickListener);
 
         // RecyclerView
         RecyclerView recyclerView = findViewById(R.id.rv_news);
@@ -77,6 +78,26 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Access to an URL news
+     */
+    private View.OnClickListener myClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            int position = (int) view.getTag();
+
+            // Get the url from News class
+            String getUrl = adapter.getItem(position).getUrl();
+
+            // Change to the next activity with their specific url
+            Intent nextAct = new Intent(MainActivity.this, WebActivity.class);
+
+            // Save the url
+            nextAct.putExtra("new_url", getUrl);
+            startActivity(nextAct);
+        }
+    };
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -104,10 +125,10 @@ public class MainActivity extends AppCompatActivity {
 
                     try {
                         lNews = NewsController.getNewsArticles_Everything(query);
+
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-
                     getList(lNews);
                 });
 

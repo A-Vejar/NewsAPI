@@ -40,6 +40,8 @@ public class WebActivity extends AppCompatActivity {
      * Back button
      *
      * @param  - Activity view
+     *
+     * TODO: Change the back_button icon
      */
     public void BackButton(View view){
         finish();

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name"> Science News App </string>
-    <string name="app_name_logo"> Latest News </string>
+
+    <string name="app_title"> Science News </string>
+    <string name="app_subtitle"> Latest News </string>
 
     <string name="activity_main_button"> API Web Site --> </string>
 
@@ -9,6 +11,7 @@
     <string name="row_news_title"> News Title </string>
     <string name="row_news_description"> News Description </string>
     <string name="row_news_publish"> News Publish Date </string>
+    <string name="row_news_url"> Outside URL Access </string>
 
     <string name="bar_menu_web"> Web Site </string>
     <string name="bar_menu_search"> Search ... </string>

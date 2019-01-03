@@ -52,9 +52,4 @@ public class NewsRepository {
             return null;
         }
     }
-
-    // Return the news size
-    public int count(){
-        return newsDao.count();
-    }
 }

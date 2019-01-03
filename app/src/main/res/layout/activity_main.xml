@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/windowBackground"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -30,16 +30,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
-            android:elevation="4dp"
-            android:theme="@style/AppTheme"
-            app:subtitle="@string/app_name_logo"
-            app:subtitleTextAppearance="@style/TextAppearance.AppCompat"
-            app:subtitleTextColor="@color/colorSkyLight"
-            app:title="@string/app_name"
-            app:titleTextColor="@color/colorSkyLight"/>
+            android:background="@color/colorSkyDark"
+            app:subtitle="@string/app_subtitle"
+            app:subtitleTextAppearance="@style/ActionBarSubTitle"
+            app:title="@string/app_title"
+            app:titleTextAppearance="@style/ActionsBarTitle" />
     </LinearLayout>
-
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_news"
@@ -78,7 +74,7 @@
         android:textAllCaps="false"
         android:textColor="@color/textColor"
         android:textSize="12sp"
-        android:textStyle="bold|italic"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/rv_news" />

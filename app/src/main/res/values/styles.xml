@@ -4,9 +4,32 @@
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorEarth</item>
+        <item name="colorPrimary">@color/colorSky</item>
+        <item name="colorAccent">@color/windowBackground</item>
+
+    </style>
+
+    <!-- ActionBar Title -->
+
+    <style name="ActionsBarTitle" parent="@android:style/TextAppearance" >
+
+        <item name="android:textSize" > 20dp </item>
+        <item name="android:textStyle" > bold|italic </item>
+        <item name="android:textColor" > @color/windowBackground </item>
+        <item name="android:fontFamily" > monospace </item>
+
+    </style>
+
+    <!-- ActionBar Sub-Title -->
+
+    <style name="ActionBarSubTitle" parent="@android:style/TextAppearance" >
+
+        <item name="android:textSize" > 15dp </item>
+        <item name="android:textStyle" > italic </item>
+        <item name="android:textColor" > @color/windowBackground </item>
+        <item name="android:fontFamily" > monospace </item>
+
     </style>
 
 </resources>

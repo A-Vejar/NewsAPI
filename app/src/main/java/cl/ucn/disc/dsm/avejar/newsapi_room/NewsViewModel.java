@@ -77,20 +77,4 @@ public final class NewsViewModel extends AndroidViewModel {
             }
         });
     }
-
-    /**
-     * Get the news-articles size
-     *
-     * @return - Number of news-articles
-     */
-    public int newsSize() {
-        return repository.count();
-    }
-
-    /**
-     * Load all news-articles inside the DB
-     */
-    public void loadAllArticles(){
-        this.getNews = repository.getAllNewsArticles();
-    }
 }
